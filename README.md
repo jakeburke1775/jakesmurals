@@ -7,15 +7,15 @@ React + Vite site configured for GitHub Pages deployment.
 1. Create a GitHub repository named `jakesmurals` under your account.
 2. In this project folder, add your remote:
 
-	```bash
-	git remote add origin https://github.com/<your-username>/jakesmurals.git
-	```
+```bash
+git remote add origin https://github.com/<your-username>/jakesmurals.git
+```
 
 3. Install dependencies:
 
-	```bash
-	npm install
-	```
+```bash
+npm install
+```
 
 ## Push source code to GitHub
 
