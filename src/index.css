@@ -1,0 +1,61 @@
+:root {
+  font-family: Arial, 'Segoe UI', Helvetica, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #1f140d;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'Station';
+  src:
+    url('/fonts/Station.woff2') format('woff2'),
+    url('/fonts/Station.woff') format('woff'),
+    url('/fonts/Station.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Station Stencil';
+  src:
+    url('/fonts/StationStencil.woff2') format('woff2'),
+    url('/fonts/StationStencil.woff') format('woff'),
+    url('/fonts/StationStencil.ttf') format('truetype');
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}

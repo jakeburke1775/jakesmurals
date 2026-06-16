@@ -1,0 +1,6 @@
+.main {
+  flex: 1;
+  width: 100%;
+  background-color: #ffffff;
+  min-height: 400px;
+}

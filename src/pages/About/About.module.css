@@ -1,0 +1,87 @@
+.about {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.content {
+  background: white;
+  padding: 50px 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.content > p {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.veteranSection {
+  margin-top: 50px;
+  padding: 30px;
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+}
+
+.veteranSection h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.veteranSection p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 40px 25px;
+  }
+  
+  .content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .content > p {
+    font-size: 1.1rem;
+  }
+  
+  .veteranSection h2 {
+    font-size: 1.6rem;
+  }
+  
+  .veteranSection p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content h1 {
+    font-size: 2rem;
+  }
+  
+  .content > p {
+    font-size: 1rem;
+  }
+  
+  .veteranSection {
+    padding: 20px;
+  }
+  
+  .veteranSection h2 {
+    font-size: 1.4rem;
+  }
+}
