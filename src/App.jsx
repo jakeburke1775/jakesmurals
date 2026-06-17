@@ -10,6 +10,11 @@ const exampleImageModules = import.meta.glob('./assets/examples/*.{jpg,jpeg,png,
 });
 
 const exampleImages = Object.values(exampleImageModules);
+const photoColumns = [[], [], []];
+
+exampleImages.forEach((imageSrc, index) => {
+  photoColumns[index % 3].push({ imageSrc, index });
+});
 
 function LandingPage() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -54,17 +59,21 @@ function LandingPage() {
           </div>
         </div>
         <section className="photo-collage" aria-label="Example mural photos">
-          {exampleImages.map((imageSrc, index) => (
-            <figure className="photo-tile" key={imageSrc}>
-              <button
-                type="button"
-                className="photo-tile__button"
-                onClick={() => setSelectedImage({ src: imageSrc, alt: `Example work ${index + 1}` })}
-                aria-label={`Open example work ${index + 1}`}
-              >
-                <img src={imageSrc} alt={`Example work ${index + 1}`} loading="lazy" />
-              </button>
-            </figure>
+          {photoColumns.map((column, columnIndex) => (
+            <div className="photo-column" key={`photo-column-${columnIndex}`}>
+              {column.map(({ imageSrc, index }) => (
+                <figure className="photo-tile" key={imageSrc}>
+                  <button
+                    type="button"
+                    className="photo-tile__button"
+                    onClick={() => setSelectedImage({ src: imageSrc, alt: `Example work ${index + 1}` })}
+                    aria-label={`Open example work ${index + 1}`}
+                  >
+                    <img src={imageSrc} alt={`Example work ${index + 1}`} loading="lazy" />
+                  </button>
+                </figure>
+              ))}
+            </div>
           ))}
         </section>
 
