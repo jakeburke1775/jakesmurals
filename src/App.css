@@ -22,8 +22,9 @@
 .site-header__contact-container {
   display: flex;
   flex-direction: row;
+  /* flex-direction: column; media query */
   align-items: center;
-  gap: 64px;
+  gap: 16px;
 }
 
 .site-header__item {
@@ -71,7 +72,7 @@
   letter-spacing: 0.18em;
   text-transform: uppercase;
   text-align: center;
-  text-shadow: 0 6px 12px rgba(0, 0, 100, 0.5);
+  text-shadow: 0 2px 12px rgba(0, 0, 100, 0.2);
 }
 .badges {
   display: flex;
@@ -127,7 +128,7 @@
   border-radius: 14px;
   overflow: hidden;
   background: #f2f2f2;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0px 16px rgba(0, 0, 0, 0.1);
 }
 
 .photo-tile__button {
@@ -202,5 +203,11 @@
 @media (min-width: 1023px) {
   .badges {
     padding: 0 20%;
+  }
+}
+
+@media (max-width: 402px) {
+  .site-header__contact-container {
+    flex-direction: column;
   }
 }
