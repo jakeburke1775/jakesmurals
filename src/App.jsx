@@ -9,7 +9,13 @@ const exampleImageModules = import.meta.glob('./assets/examples/*.{jpg,jpeg,png,
   import: 'default'
 });
 
-const exampleImages = Object.values(exampleImageModules);
+const exampleImages = Object.values(exampleImageModules).filter(
+  (_, index, arr) => {
+    const entries = Object.entries(exampleImageModules);
+    const [filePath] = entries[arr.indexOf(_)];
+    return !filePath.includes('glassmusic');
+  }
+);
 const photoColumns = [[], [], []];
 
 exampleImages.forEach((imageSrc, index) => {
