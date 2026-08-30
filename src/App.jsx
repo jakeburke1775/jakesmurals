@@ -51,7 +51,7 @@ function LandingPage() {
       </header>
       <main className="site-body" aria-label="Page content">
         <h1 className="services-heading">
-          Murals - Interior painting - Window painting - Chalk drawing - Drywall Repair
+          Murals - Interior painting - Chalk Drawing - Drywall
         </h1>
         <div className="badges" aria-label="Business badges">
           <div className="badge badge-vet" aria-label="Veteran owned and operated">
